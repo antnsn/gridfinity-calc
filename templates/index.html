@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gridfinity Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        main {
+            max-width: 600px;
+            margin: auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        label {
+            display: flex;
+            align-items: center;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Gridfinity Calculator</h1>
+        <form action="/calculate" method="POST">
+            <div class="grid">
+                <label for="storage_width"><h3>Storage Width:</h3></label>
+                <input type="text" id="storage_width" name="storage_width" required>
+                
+                <label for="storage_length"><h3>Storage Length:</h3></label>
+                <input type="text" id="storage_length" name="storage_length" required>
+                
+                <label for="buildplate_width"><h3>Build Plate Width (in mm):</h3></label>
+                <input type="text" id="buildplate_width" name="buildplate_width" required>
+                
+                <label for="buildplate_length"><h3>Build Plate Length (in mm):</h3></label>
+                <input type="text" id="buildplate_length" name="buildplate_length" required>
+                
+                <label for="unit"><h3>Unit of Measurement:</h3></label>
+                <select id="unit" name="unit" required>
+                    <option value="millimeters">Millimeters</option>
+                    <option value="centimeters">Centimeters</option>
+                    <option value="meters">Meters</option>
+                </select>
+            </div>
+            <input type="submit" value="Calculate">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gridfinity Calculator Result</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        main {
+            max-width: 600px;
+            margin: auto;
+        }
+        .results {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Gridfinity Calculator Result</h1>
+        <div class="grid">
+            <div><h3>Units across width:</h3></div>
+            <div><h3>{{ results.units_across_width }}</h3></div>
+        </div>
+        <div class="grid">
+            <div><h3>Units across depth:</h3></div>
+            <div><h3>{{ results.units_across_length }}</h3></div>
+        </div>
+        <div class="grid">
+            <div><h3>Leftover width:</h3></div>
+            <div><h3>{{ results.leftover_width }} mm</h3></div>
+        </div>
+        <div class="grid">
+            <div><h3>Leftover depth:</h3></div>
+            <div><h3>{{ results.leftover_length }} mm</h3></div>
+        </div>
+        <div class="grid">
+            <div><h3>Max size of grid on build plate:</h3></div>
+            <div><h3>{{ results.max_grid_width }} units x {{ results.max_grid_length }} units ({{ results.max_grid_width }}x{{ results.max_grid_length }})</h3></div>
+        </div>
+        <a href="/" role="button">Go back</a>
+    </main>
+</body>
+</html>
