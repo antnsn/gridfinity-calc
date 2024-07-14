@@ -59,4 +59,4 @@ def calculate():
         return "Please enter valid numbers."
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=false)
