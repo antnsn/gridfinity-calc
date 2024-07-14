@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+.git
+.DS_Store
+.gitignore
+.env
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+Procfile
